@@ -38,23 +38,20 @@ int main()
 	std::cin >> polje;
 	polja[polje] = trenutniUnos;
 
-	//Da ne moze upisivati veći broj od zadanih polja.
-	if (polje < 0 || polje > 2) {
-		std::cout << "Unijet je pre veliki broj!" << std::endl;
-	}
 
 	//Pisanje X i O na prazna polja, za sva polja.
-	if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O' ) {
+	if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
 		std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
 		std::cout << "-----------" << std::endl;
 		std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
 		std::cout << "-----------" << std::endl;
 		std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
 
-		std::cout << "Igru nastavlja: O " << std::endl;
-		std::cout << "Unesite broj od 0-8 za unos na odabrano polje:" << std::endl;
-		std::cin >> polje;
-		polja[polje] = trenutniUnos1;
+			std::cout << "Igru nastavlja: O " << std::endl;
+			std::cout << "Unesite broj od 0-8 za unos na odabrano polje:" << std::endl;
+			std::cin >> polje;
+			polja[polje] = trenutniUnos1;
+
 
 		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
 			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
@@ -170,5 +167,4 @@ int main()
 		}
 
 	}
-
 }
