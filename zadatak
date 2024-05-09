@@ -8,21 +8,21 @@ int main()
 
 	//Definiranje polja za plocu.
 	char polja[9] = {
-	polja[0] = '0',
-	polja[1] = '1',
-	polja[2] = '2',
-	polja[3] = '3',
-	polja[4] = '4',
-	polja[5] = '5',
-	polja[6] = '6',
-	polja[7] = '7',
-	polja[8] = '8'
+	polja[0] = ' ',
+	polja[1] = ' ',
+	polja[2] = ' ',
+	polja[3] = ' ',
+	polja[4] = ' ',
+	polja[5] = ' ',
+	polja[6] = ' ',
+	polja[7] = ' ',
+	polja[8] = ' '
 	};
 
-	//Za unos slova na polje.
+	//Za unos slova na polje, igrac X i O i njihove vrijednosti.
 	char unos1 = 'X';
 	char unos2 = 'O';
-	int polje = -1;
+	int polje = 0;
 	char trenutniUnos = unos1;
 	char trenutniUnos1 = unos2;
 
@@ -34,16 +34,16 @@ int main()
 	std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
 
 	std::cout << "\n" << std::endl;
-	std::cout << "-----------------------------------------------------------" << std::endl;
-	std::cout << "| Igru zapocinje: X                                       |" << std::endl;
-	std::cout << "| Unesite broj od 0-8 za unos na odabrano polje:          |" << std::endl;
-	std::cout << "| Time ce uneseni broj zamjeniti broj na tabli sa X ili O.|" << std::endl;
-	std::cout << "-----------------------------------------------------------" << std::endl;
+	std::cout << "--------------------------------------------------" << std::endl;
+	std::cout << "| Igru zapocinje: X                              |" << std::endl;
+	std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
+	std::cout << "--------------------------------------------------" << std::endl;
 	std::cin >> polje;
 	polja[polje] = trenutniUnos;
 
 
 	//Pisanje X i O na prazna polja, za sva polja.
+	//Prvi uvjet unosa i crtanja.
 	if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
 		std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
 		std::cout << "-----------" << std::endl;
@@ -51,150 +51,270 @@ int main()
 		std::cout << "-----------" << std::endl;
 		std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
 
-		    std::cout << "--------------------------------------------------" << std::endl;
-			std::cout << "| Igru nastavlja: O                              |" << std::endl;
-			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cin >> polje;
-			polja[polje] = trenutniUnos1;
-
-
-		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
-			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
-
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cout << "| Igru nastavlja: X                              |" << std::endl;
-			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cin >> polje;
-			polja[polje] = trenutniUnos;
-
-
-		}
-
-		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
-			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
-
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cout << "| Igru nastavlja: O                              |" << std::endl;
-			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cin >> polje;
-			polja[polje] = trenutniUnos1;
-
-
-		}
-
-		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
-			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
-
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cout << "| Igru nastavlja: X                              |" << std::endl;
-			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cin >> polje;
-			polja[polje] = trenutniUnos;
-
-
-
-		}
-
-		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
-			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
-
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cout << "| Igru nastavlja: O                              |" << std::endl;
-			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cin >> polje;
-			polja[polje] = trenutniUnos1;
-
-
-		}
-
-		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
-			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
-
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cout << "| Igru nastavlja: X                              |" << std::endl;
-			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cin >> polje;
-			polja[polje] = trenutniUnos;
-
-		}
-
-		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
-			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
-
-
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cout << "| Igru nastavlja: O                              |" << std::endl;
-			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cin >> polje;
-			polja[polje] = trenutniUnos1;
-
-
-		}
-
-		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
-			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
-
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cout << "| Igru nastavlja: X                              |" << std::endl;
-			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cin >> polje;
-			polja[polje] = trenutniUnos;
-
-
-		}
-
-		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
-			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
-			std::cout << "-----------" << std::endl;
-			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
-
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cout << "| Igru nastavlja: O                              |" << std::endl;
-			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
-			std::cout << "--------------------------------------------------" << std::endl;
-			std::cin >> polje;
-			polja[polje] = trenutniUnos1;
-
-
-		}
+		std::cout << "--------------------------------------------------" << std::endl;
+		std::cout << "| Igru nastavlja: O                              |" << std::endl;
+		std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
+		std::cout << "--------------------------------------------------" << std::endl;
+		std::cin >> polje;
+		polja[polje] = trenutniUnos1;
 
 	}
+
+	    //Drugi uvjet unosa i crtanja.
+		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
+			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cout << "| Igru nastavlja: X                              |" << std::endl;
+			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cin >> polje;
+			polja[polje] = trenutniUnos;
+
+		}
+
+		//Treci uvijet unosa i crtanja.
+		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
+			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cout << "| Igru nastavlja: O                              |" << std::endl;
+			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cin >> polje;
+			polja[polje] = trenutniUnos1;
+
+
+		}
+
+		//Cetvrti uvjet unosa i crtanja.
+		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
+			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cout << "| Igru nastavlja: X                              |" << std::endl;
+			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cin >> polje;
+			polja[polje] = trenutniUnos;
+
+		}
+
+		//Uvjet pregledavanja da li je unesena dobitna kombinacija.
+		if (polja[0] == 'X' && polja[1] == 'X' && polja[2] == 'X'
+			||
+			polja[3] == 'X' && polja[4] == 'X' && polja[5] == 'X'
+			||
+			polja[6] == 'X' && polja[7] == 'X' && polja[8] == 'X'
+			||
+			polja[0] == 'X' && polja[3] == 'X' && polja[6] == 'X'
+			||
+			polja[1] == 'X' && polja[4] == 'X' && polja[7] == 'X'
+			||
+			polja[2] == 'X' && polja[5] == 'X' && polja[8] == 'X'
+			||
+			polja[0] == 'X' && polja[4] == 'X' && polja[8] == 'X'
+			||
+			polja[2] == 'X' && polja[4] == 'X' && polja[6] == 'X') {
+
+			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+			
+			std::cout << "------------------------" << std::endl;
+			std::cout << "| Igrac X je pobjedio! |" << std::endl;
+			std::cout << "------------------------" << std::endl;
+
+
+			return 0;
+		}
+
+		//Peti uvjet unosa i crtanja.
+		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
+			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cout << "| Igru nastavlja: O                              |" << std::endl;
+			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cin >> polje;
+			polja[polje] = trenutniUnos1;
+
+
+		}
+
+		//Uvjet pregledavanja da li je unesena dobitna kombinacija.
+		if (polja[0] == 'O' && polja[1] == 'O' && polja[2] == 'O'
+			||
+			polja[3] == 'O' && polja[4] == 'O' && polja[5] == 'O'
+			||
+			polja[6] == 'O' && polja[7] == 'O' && polja[8] == 'O'
+			||
+			polja[0] == 'O' && polja[3] == 'O' && polja[6] == 'O'
+			||
+			polja[1] == 'O' && polja[4] == 'O' && polja[7] == 'O'
+			||
+			polja[2] == 'O' && polja[5] == 'O' && polja[8] == 'O'
+			||
+			polja[0] == 'O' && polja[4] == 'O' && polja[8] == 'O'
+			||
+			polja[2] == 'O' && polja[4] == 'O' && polja[6] == 'O') {
+
+			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+
+			std::cout << "------------------------" << std::endl;
+			std::cout << "| Igrac O je pobjedio! |" << std::endl;
+			std::cout << "------------------------" << std::endl;
+
+
+			return 0;
+		}
+
+		//Sesti uvjet unosa i crtanja.
+		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
+			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cout << "| Igru nastavlja: X                              |" << std::endl;
+			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cin >> polje;
+			polja[polje] = trenutniUnos;
+
+		}
+
+		//Uvjet pregledavanja da li je unesena dobitna kombinacija.
+		if (polja[0] == 'X' && polja[1] == 'X' && polja[2] == 'X'
+			||
+			polja[3] == 'X' && polja[4] == 'X' && polja[5] == 'X'
+			||
+			polja[6] == 'X' && polja[7] == 'X' && polja[8] == 'X'
+			||
+			polja[0] == 'X' && polja[3] == 'X' && polja[6] == 'X'
+			||
+			polja[1] == 'X' && polja[4] == 'X' && polja[7] == 'X'
+			||
+			polja[2] == 'X' && polja[5] == 'X' && polja[8] == 'X'
+			||
+			polja[0] == 'X' && polja[4] == 'X' && polja[8] == 'X'
+			||
+			polja[2] == 'X' && polja[4] == 'X' && polja[6] == 'X') {
+
+			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+
+			std::cout << "------------------------" << std::endl;
+			std::cout << "| Igrac X je pobjedio! |" << std::endl;
+			std::cout << "------------------------" << std::endl;
+
+
+			return 0;
+		}
+
+		//Sedmi uvjet unosa i crtanja
+		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
+			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+
+
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cout << "| Igru nastavlja: O                              |" << std::endl;
+			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cin >> polje;
+			polja[polje] = trenutniUnos1;
+
+
+		}
+
+		//Osmi uvjet unosa i crtanja.
+		if (polja[0] == 'X' || polja[0] == 'O' || polja[1] == 'X' || polja[1] == 'O' || polja[2] == 'X' || polja[2] == 'O' || polja[3] == 'X' || polja[3] == 'O' || polja[4] == 'X' || polja[4] == 'O' || polja[5] == 'X' || polja[5] == 'O' || polja[6] == 'X' || polja[6] == 'O' || polja[7] == 'X' || polja[7] == 'O' || polja[8] == 'X' || polja[8] == 'O') {
+			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cout << "| Igru nastavlja: X                              |" << std::endl;
+			std::cout << "| Unesite broj od 0-8 za unos na odabrano polje: |" << std::endl;
+			std::cout << "--------------------------------------------------" << std::endl;
+			std::cin >> polje;
+			polja[polje] = trenutniUnos;
+
+
+		}
+
+		//Uvjet pregledavanja da li je unesena dobitna kombinacija.
+		if (polja[0] == 'X' && polja[1] == 'X' && polja[2] == 'X'
+			||
+			polja[3] == 'X' && polja[4] == 'X' && polja[5] == 'X'
+			||
+			polja[6] == 'X' && polja[7] == 'X' && polja[8] == 'X'
+			||
+			polja[0] == 'X' && polja[3] == 'X' && polja[6] == 'X'
+			||
+			polja[1] == 'X' && polja[4] == 'X' && polja[7] == 'X'
+			||
+			polja[2] == 'X' && polja[5] == 'X' && polja[8] == 'X'
+			||
+			polja[0] == 'X' && polja[4] == 'X' && polja[8] == 'X'
+			||
+			polja[2] == 'X' && polja[4] == 'X' && polja[6] == 'X') {
+
+			std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+			std::cout << "-----------" << std::endl;
+			std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+
+			std::cout << "------------------------" << std::endl;
+			std::cout << "| Igrac X je pobjedio! |" << std::endl;
+			std::cout << "------------------------" << std::endl;
+
+
+			return 0;
+		}
+
+
+		std::cout << " " << polja[0] << " | " << polja[1] << " | " << polja[2] << std::endl;
+		std::cout << "-----------" << std::endl;
+		std::cout << " " << polja[3] << " | " << polja[4] << " | " << polja[5] << std::endl;
+		std::cout << "-----------" << std::endl;
+		std::cout << " " << polja[6] << " | " << polja[7] << " | " << polja[8] << std::endl;
+			std::cout << "------------------------------------" << std::endl;
+			std::cout << "| IGRA JE ZAVRSENA BEZ POBJEDNIKA! |" << std::endl;
+			std::cout << "------------------------------------" << std::endl;
 }
